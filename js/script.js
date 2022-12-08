@@ -15,6 +15,7 @@ const emailRFC = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
 
 const formEle = document.getElementById('form');
 
+
 let password = '';
 
 // vaildation Functions :-
@@ -97,7 +98,6 @@ formEle.addEventListener('submit', (e) => {
     document.getElementById('button-error').style.visibility = 'hidden';
 
     window.localStorage.setItem('email', emailInput.value);
-    console.log(window.localStorage);
 
     const fromData = {
       username: userNameInput.value,
@@ -118,3 +118,5 @@ formEle.addEventListener('submit', (e) => {
       .catch((error) => console.log(error));
   }
 });
+
+
